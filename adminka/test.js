@@ -25,8 +25,27 @@ function check_form() {
         // admin_token
     };
 
-    fetch('https://45htp9nq-12060.euw.devtunnels.ms/api/admin/login/', {
-    mode: 'no-cors',
+    // fetch('http://80.93.190.50:12060/api/admin/login', {
+    // // mode: 'no-cors',
+    // method: 'POST',
+    // headers: {
+    //     'Content-Type': 'application/json'
+    // },
+    // body: JSON.stringify(data)
+    // })
+    // .then(response => {
+    //     if (response.ok) {
+    //         console.log(data.data);
+    //         window.location.href = 'admin_main_page.html';
+    //     } else {
+    //         console.log('Ошибка при отправке запроса');
+    //     }
+    // })
+    // .catch(error => {
+    //     console.error('Ошибка:', error);
+    // });
+
+    fetch('http://80.93.190.50:12060/api/admin/login/', {
     method: 'POST',
     headers: {
         'Content-Type': 'application/json'
@@ -35,13 +54,19 @@ function check_form() {
     })
     .then(response => {
         if (response.ok) {
-            console.log('Запрос успешно отправлен, но ответ сервера не доступен из-за mode: no-cors');
-            window.location.href = 'admin_main_page.html';
+            // Если ответ успешен, читаем его как JSON
+            return response.json();
         } else {
-            console.log('Ошибка при отправке запроса');
+            throw new Error('Ошибка при отправке запроса');
         }
     })
+    .then(data => {
+        // Выводим полученные данные в консоль
+        console.log(data);
+        // Далее вы можете выполнить дополнительные действия с полученными данными
+    })
     .catch(error => {
+        // Обработка ошибок
         console.error('Ошибка:', error);
     });
 

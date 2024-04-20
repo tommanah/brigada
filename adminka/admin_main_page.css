@@ -1,22 +1,19 @@
 body, html {
     margin: 0;
     padding: 0;
-    height: 100%; /* Задаем высоту 100% для body и html */
+    height: 100%;
     font-family: 'moscowsansregular';
 }
 
 .menu {
     display: flex;
-    flex-direction: column; /* Размещаем элементы столбцом */
+    flex-direction: column;
     width: 10%;
-    height: 100vh; /* Задаем высоту 100% относительно высоты окна браузера */
+    transition: width 0.5s ease-in-out;
+    height: 100vh;
     background-color: rgb(222, 222, 222);
-    padding: 20px; /* Добавляем внутренний отступ для кнопок */
+    padding: 20px;
 }
-
-/* .menu button {
-    margin-bottom: 10px; /* Отступ между кнопками 
-} */
 
 #map_button {
     margin-top: 40px;
@@ -27,8 +24,47 @@ body, html {
 }
 
 .button_menu {
+    border-radius: 8px;
+    border: none;
+    background-color: rgb(222, 222, 222);
     margin-top: 10px;
     padding: 8px;
+    box-shadow: 0 0 0 rgba(0,0,0,0);
+    margin-left: 0px;
+    font-weight: bold;
+    white-space: nowrap;
+    transition: opacity 0.3s ease, box-shadow 0.3s ease;
+    /* transition: box-shadow 0.2s ease; */
+}
+
+.button_menu.hidden {
+    opacity: 0; /* Скрыть текст */
+}
+
+.button_menu:hover {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.burger_menu {
+    transition: box-shadow 0.3s ease;
+    border: none;
+    border-radius: 3px;
+    background-color: rgb(222, 222, 222);
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    vertical-align: middle;
+}
+
+.burger_menu:hover {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.burger_menu img {
+    transition: transform 0.5s ease; /* Добавляем плавность */
+}
+.rotated {
+    transform: rotate(180deg); /* Применяем поворот на 180 градусов */
 }
 
 .divider1,
@@ -39,7 +75,6 @@ body, html {
     background-color: black;
     position: absolute;
     border-radius: 2px;
-    
 }
 
 .divider1 {
@@ -56,19 +91,26 @@ body, html {
     height: 1px;
 }
 
-.burger_menu {
-    /* border: none; */
-    border-radius: 3px;
-    background: none;
-    width: 30px;
-    height: 30px;
-    position: absolute;
-    vertical-align: middle;
-}
-
 .image {
     height: 35px;
     width: 35px;
-    margin-left: -10px;
-    margin-top: -5px;
+    margin-left: -8.5px;
+    margin-top: -3.5px;
 }
+
+.image_1 {
+    height: 200px;
+    width: 200px;
+}
+
+.menu_collapsed {
+    width: 2.5%;
+}
+
+/* .chat_image {
+    width: 375%;
+    margin-top: -95px;
+    margin-left: -205px;
+    padding: 0px;
+} */
+
