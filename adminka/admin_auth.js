@@ -44,7 +44,7 @@ function check_form() {
     };
 
     // Отправляем данные на сервер
-    fetch('url_вашего_backend', {
+    fetch('http://80.93.190.50:12060/api/admin/login', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -53,7 +53,7 @@ function check_form() {
     })
     .then(response => {
         if (response.ok) {
-            console.log('Данные успешно отправлены на сервер');
+            console.log();
         } else {
             console.error('Ошибка при отправке данных на сервер');
         }
