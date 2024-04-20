@@ -1,0 +1,74 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Задаем высоту 100% для body и html */
+    font-family: 'moscowsansregular';
+}
+
+.menu {
+    display: flex;
+    flex-direction: column; /* Размещаем элементы столбцом */
+    width: 10%;
+    height: 100vh; /* Задаем высоту 100% относительно высоты окна браузера */
+    background-color: rgb(222, 222, 222);
+    padding: 20px; /* Добавляем внутренний отступ для кнопок */
+}
+
+/* .menu button {
+    margin-bottom: 10px; /* Отступ между кнопками 
+} */
+
+#map_button {
+    margin-top: 40px;
+}
+
+#title {
+    color: rgb(181, 181, 181);
+}
+
+.button_menu {
+    margin-top: 10px;
+    padding: 8px;
+}
+
+.divider1,
+.divider2,
+.divider3 {
+    width: 20px;
+    height: 1px;
+    background-color: black;
+    position: absolute;
+    border-radius: 2px;
+    
+}
+
+.divider1 {
+    margin-top: -7px;
+}
+
+.divider2 {
+    margin-top: -1px;
+    /* height: 3px; */
+}
+
+.divider3 {
+    margin-top: 6px;
+    height: 1px;
+}
+
+.burger_menu {
+    /* border: none; */
+    border-radius: 3px;
+    background: none;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    vertical-align: middle;
+}
+
+.image {
+    height: 35px;
+    width: 35px;
+    margin-left: -10px;
+    margin-top: -5px;
+}
