@@ -7,28 +7,40 @@
     <link rel="stylesheet" href="admin_main_page.css">
 </head>
 <body>
-    <!-- <div id="title">МОСГОРТРАНС</div> -->
-    <div class="menu">
-        <button class="burger_menu" onclick="toggle_text()">
-            <img src="menu.png" class="image">
-        </button>
-
-        <button id="map_button" class="button_menu">    
-            КАРТА
-        </button>
+    
+    <!-- <div class="container"> -->
+        <!-- <img src="5.png" class="header_image"> -->
+        <!-- <div id="title">МОСГОРТРАНС</div> -->
+        <div class="page_header">
+            <button class="burger_menu" onclick="toggle_text()">
+                <!-- <img src="menu.png" class="image"> -->
+                <canvas id="menu_image"></canvas>
+            </button>
+            <!-- <img src="5.png" class="header_image"> -->
+            <!-- <img src="Moscow_Transport_logo.svg.png" class="header_image" id="mos_trans_log"> -->
+        </div>
+        <div class="menu">
+            <!-- <button class="burger_menu" onclick="toggle_text()">
+                <img src="menu.png" class="image">
+            </button> -->
         
-        <button id="user_button" class="button_menu">
-            <!-- О ПОЛЬЗОВАТЕЛЕ -->
-            ИНФО
-        </button>
+            <button id="map_button" class="button_menu">    
+                КАРТА
+            </button>
+            
+            <button id="user_button" class="button_menu">
+                <!-- О ПОЛЬЗОВАТЕЛЕ -->
+                ИНФО
+            </button>
+            
+            <button id="chat_button" class="button_menu">
+                <!-- <img src="1.png" class="chat_image"> -->
+                ЧАТ
+            </button>
         
-        <button id="chat_button" class="button_menu">
-            <!-- <img src="1.png" class="chat_image"> -->
-            ЧАТ
-        </button>
+        </div>
 
-    </div>
-
+    <!-- </div> -->
     <script src="admin_main_page.js"></script>
 </body>
 </html>

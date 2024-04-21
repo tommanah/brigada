@@ -11,26 +11,33 @@
     <link href="admin_auth.css" rel="stylesheet">
 </head>
 <body>
-    <p>ВХОД ДЛЯ АДМИНИСТРАТОРА</p>
-    
-    <form >
-        <p>Введите логин:</p>
-        <input type="text" id="admin_login" placeholder="Логин"></input>
-        
-        <p>Введите пароль:</p>
-        <input type="password" id="admin_password" placeholder="Пароль"></input>
-        
-        <p>Введите токен:</p>
-        <input type="text" id="admin_token" placeholder="XXX-XXX"></input>
 
-        <button type="button" id="btn" onclick="check_form()">Войти</button>
+    <!-- <div class="container"> -->
 
-        <p id="error_admin_login" style="display: none;">Заполните поле логин</p>
-        <p id="error_admin_password" style="display: none;">Заполните поле пароль</p>
-        <p id="error_admin_token" style="display: none;">Заполните поле токен</p>
-        
-    </form>
 
+            <form class="auth_form">
+                <p class="title">ВХОД ДЛЯ АДМИНИСТРАТОРА</p>
+
+                <p class="text">Введите логин:</p>
+                <input type="text" id="admin_login" placeholder="Логин"></input>
+
+                <p class="text">Введите пароль:</p>
+                <input type="password" id="admin_password" placeholder="Пароль"></input>
+
+                <p class="text">Введите токен:</p>
+                <input type="text" id="admin_token" placeholder="XXX-XXX"></input>
+
+                <button type="button" id="btn" class="form_button" onclick="check_form()">Войти</button>
+
+                <p id="error_admin_login" style="display: none;">Заполните поле логин</p>
+                <p id="error_admin_password" style="display: none;">Заполните поле пароль</p>
+                <p id="error_admin_token" style="display: none;">Заполните поле токен</p>
+
+            </form>
+
+            <!-- <img src="map_metro.png" class="metro_sign"> -->
+
+    <!-- </div> -->
 </body>
 </html> 
 
